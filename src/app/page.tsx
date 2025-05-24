@@ -151,8 +151,7 @@ export default function ToDoListPage() {
               <p className="text-sm text-gray-500 mt-2">
                 📅 Deadline:{" "}
                 <span className="font-medium">
-                  
-                {task.deadline.seconds * 1000}
+                {new Date(task.deadline.seconds * 1000).toLocaleString()}
                   
                 </span>
               </p>
