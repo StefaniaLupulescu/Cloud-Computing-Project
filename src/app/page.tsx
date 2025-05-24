@@ -53,9 +53,7 @@ export default function ToDoListPage() {
     title: string,
     deadline: Task["deadline"]
   ) => {
-    const formattedDate = new Date(deadline.seconds * 1000).toLocaleString(
-      "ro-RO"
-    );
+    const formattedDate = new Date(deadline.seconds * 1000);
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
